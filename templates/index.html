@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Random Text Generator</title>
+  <link rel="stylesheet" href="static/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <h1>Random Text Generator</h1>
+
+  <button class="toggle-mode" title="Light/Dark Mode" onclick="toggleMode()">☀\☾</button>
+
+  <form method="post" onsubmit="showLoader()">
+    <input type="text" name="prompt" placeholder="Ask anything" required>
+    <input type="text" name="length" placeholder="Response length" required>
+    <input type="submit" title="search" value="Go">
+  </form>
+
+  <div class="loader" id="loader"></div>
+
+  <div class="output-box" id="response-box" style="display: none;">
+    {% if output %}
+    <button class="copy-btn" title="Copy" onclick="copyToClipboard()"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="feather feather-copy">
+        <rect x="9" y="9" width="9" height="9" rx="2" ry="2"></rect>
+        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+      </svg>
+    </button>
+    {{ output }}
+    {% endif %}
+  </div>
+
+  <script>
+    function showLoader() {
+      document.getElementById("loader").style.display = "block";
+      document.getElementById("response-box").style.display = "none";
+    }
+
+    window.onload = () => {
+      const box = document.getElementById("response-box");
+      if (box && box.textContent.trim().length > 0) {
+        box.style.display = "block";
+        document.getElementById("loader").style.display = "none";
+      }
+    };
+
+    function toggleMode() {
+      document.body.classList.toggle("light-mode");
+    }
+
+    function copyToClipboard() {
+      const text = document.getElementById("response-box").innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        console.log("Copied to clipboard!");
+      });
+    }
+  </script>
+</body>
+
+</html>
