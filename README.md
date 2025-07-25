@@ -6,7 +6,7 @@ This project generates **random yet realistic-looking text**
 
 ## ▶️ How to Run
 
-### 1. Clone the Repository
+### Clone the Repository and Run
 
 ```bash
 git clone https://github.com/HansrajS1/Random-Text-Generator.git
