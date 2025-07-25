@@ -1,4 +1,4 @@
-# 📝 Random Text Generator using Markov Chains
+# 📝 Random Text Generator 
 
 This project generates **random yet realistic-looking text**
 
