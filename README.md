@@ -11,4 +11,5 @@ This project generates **random yet realistic-looking text**
 ```bash
 git clone https://github.com/HansrajS1/Random-Text-Generator.git
 cd Random-Text-Generator
+pip install -r requirements.txt
 python app.py
