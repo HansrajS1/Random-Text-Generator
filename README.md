@@ -1,4 +1,4 @@
-# 📝 Random Text Generator 
+# 📝 Random Text Generator using gpt-2 and flask
 
 This project generates **random yet realistic-looking text**
 
