@@ -1,2 +1,14 @@
-# Random Text Generator
- Random Text Generator - using gpt-2 and flask
+# 📝 Random Text Generator using Markov Chains
+
+This project generates **random yet realistic-looking text**
+
+---
+
+## ▶️ How to Run
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/HansrajS1/Random-Text-Generator.git
+cd Random-Text-Generator
+python app.py
